@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MEU PRIMEIRO APP</string>
+    <string name="button_send">Enviar</string>
+    <string name="name_enter">Digite seu nome</string>
+    <string name="app_nome">Meu Primeiro App</string>
+    <string name="name_calc">Calculadora</string>
+    <string name="Botao">Calcular</string>
+</resources>

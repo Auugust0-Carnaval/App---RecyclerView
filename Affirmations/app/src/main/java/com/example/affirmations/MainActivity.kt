@@ -1,9 +1,9 @@
 package com.example.affirmations
 
 import androidx.appcompat.app.AppCompatActivity
-import com.example.affirmations.MainActivity
 import android.os.Bundle
-import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.example.affirmations.adapter.ItemAdapter
 import com.example.affirmations.data.DataSource
 
 class MainActivity : AppCompatActivity() {
@@ -11,9 +11,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //val textView : TextView = findViewById(R.id.textview)
-        //textView.text = DataSource().loadAffirmations().size.toString() //heh foi kaka mas é text, sim amsi
+   // incialize os dados
 
+        val myDataset = DataSource().loadAffirmations()
 
+        val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
+        recyclerView.adapter = ItemAdapter (this, myDataset)
+
+        recyclerView.setHasFixedSize(true)
     }
 }

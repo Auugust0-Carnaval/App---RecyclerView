@@ -12,9 +12,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
    // incialize os dados
-
         val myDataset = DataSource().loadAffirmations()
 
+        //
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView.adapter = ItemAdapter (this, myDataset)
 
